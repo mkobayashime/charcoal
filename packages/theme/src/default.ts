@@ -17,6 +17,8 @@ const outlineEffect = {
 
 const assertive = '#ff2b00'
 const brand = '#0096fa'
+const borderForLight = rgba('#000000', 0.08)
+const borderForDark = rgba('#ffffff', 0.12)
 
 const common = {
   typography: {
@@ -74,13 +76,11 @@ export const light: CharcoalTheme = {
   effect: {
     hover: {
       type: 'alpha',
-      color: '#000000',
-      opacity: 0.08,
+      color: rgba('#000000', 0.04), // surface3
     },
     press: {
       type: 'alpha',
-      color: '#000000',
-      opacity: 0.16,
+      color: rgba('#000000', 0.16), // surface10
     },
   },
   color: {
@@ -99,17 +99,22 @@ export const light: CharcoalTheme = {
     surface7: rgba('#000000', 0.02),
     surface8: rgba('#000000', 0.88),
     surface9: rgba('#ffffff', 0.84),
-    text1: rgba('#000000', 0.88),
-    text2: rgba('#000000', 0.64),
-    text3: rgba('#000000', 0.32),
-    text4: rgba('#000000', 0.16),
+    surface10: rgba('#000000', 0.16),
+    text1: '#1f1f1f',
+    text2: '#474747',
+    text3: '#858585',
+    text4: '#adadad',
     text5: '#ffffff',
     brand,
     assertive,
+    warning: '#ffaf0f',
+    success: '#b1cc29',
+    updatedItem: rgba(0, 150, 250, 0.04),
+    border: borderForLight,
   },
   border: {
     default: {
-      color: rgba('#000000', 0.08),
+      color: borderForLight,
     },
   },
 }
@@ -119,13 +124,11 @@ export const dark: CharcoalTheme = {
   effect: {
     hover: {
       type: 'alpha',
-      color: '#000000',
-      opacity: 0.08,
+      color: rgba('#ffffff', 0.12), // surface3
     },
     press: {
       type: 'alpha',
-      color: '#000000',
-      opacity: 0.16,
+      color: rgba('#ffffff', 0.2), // surface10
     },
   },
   color: {
@@ -143,17 +146,22 @@ export const dark: CharcoalTheme = {
     surface7: light.color.surface7,
     surface8: light.color.surface8,
     surface9: light.color.surface9,
-    text1: '#ffffff',
-    text2: rgba('#ffffff', 0.68),
-    text3: rgba('#ffffff', 0.36),
-    text4: rgba('#ffffff', 0.28),
+    surface10: rgba('#ffffff', 0.2),
+    text1: '#f5f5f5',
+    text2: '#d6d6d6',
+    text3: '#858585',
+    text4: '#5c5c5c',
     text5: light.color.text5,
     brand,
     assertive,
+    warning: light.color.warning,
+    success: light.color.success,
+    updatedItem: rgba(0, 150, 250, 0.12),
+    border: borderForDark,
   },
   border: {
     default: {
-      color: rgba('#ffffff', 0.12),
+      color: borderForDark,
     },
   },
 }
